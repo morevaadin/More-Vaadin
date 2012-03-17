@@ -17,4 +17,11 @@
 		<connection>scm:git:git://github.com/More-Vaadin</connection>
 		<developerConnection>scm:git:[fetch=]https://nfrankel@github.com/nfrankel/More-Vaadin.git[push=]git@github.com:nfrankel/More-Vaadin.git</developerConnection>
 	</scm>
+	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin</artifactId>
+			<version>7.0.0.alpha1</version>
+		</dependency>
+	</dependencies>
 </project>
