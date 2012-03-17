@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.morevaadin</groupId>
+	<artifactId>morevaadin-parent</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>Parent POM for More Vaadin projects and examples</name>
+	<developers>
+		<developer>
+			<id>nfrankel</id>
+			<name>Nicolas Frankel</name>
+			<url>http://blog.frankel.ch/</url>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git://github.com/More-Vaadin</connection>
+		<developerConnection>scm:git:[fetch=]https://nfrankel@github.com/nfrankel/More-Vaadin.git[push=]git@github.com:nfrankel/More-Vaadin.git</developerConnection>
+	</scm>
+</project>
