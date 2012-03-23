@@ -1,12 +1,26 @@
+/*
+* Copyright 2011 Nicolas Frankel
+*
+* Licensed under the Apache License, Version 2.0 (the "License"); you may not
+* use this file except in compliance with the License. You may obtain a copy of
+* the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+* License for the specific language governing permissions and limitations under
+* the License.
+*/
 package com.moorevaadin.vaadin7.beanvalidation;
 
-import java.util.Collection;
+import static com.vaadin.ui.Notification.TYPE_ERROR_MESSAGE;
+import static com.vaadin.ui.Notification.TYPE_HUMANIZED_MESSAGE;
 
-import com.vaadin.data.Validator;
 import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.fieldgroup.FieldGroup.CommitException;
 import com.vaadin.data.util.BeanItem;
-import com.vaadin.data.validator.BeanValidator;
 import com.vaadin.terminal.WrappedRequest;
 import com.vaadin.ui.AbstractTextField;
 import com.vaadin.ui.Button;
@@ -41,7 +55,7 @@ public class BeanValidationRoot extends Root {
 
 		group = new FieldGroup(item);
 
-		group.setFieldFactory(new EnhancedFieldGroupFieldFactory());
+		//group.setFieldFactory(new EnhancedFieldGroupFieldFactory());
 
 		Field<?> gender = group.buildAndBind("Gender", "gender", Select.class);
 		firstName = (AbstractTextField) group.buildAndBind("First name", "firstName");
@@ -52,6 +66,10 @@ public class BeanValidationRoot extends Root {
 		firstName.setNullRepresentation("");
 		lastName.setNullRepresentation("");
 		email.setNullRepresentation("");
+
+		firstName.addListener(new InstallPersonValidatorBlurListener(firstName, "firstName"));
+		lastName.addListener(new InstallPersonValidatorBlurListener(lastName, "lastName"));
+		email.addListener(new InstallPersonValidatorBlurListener(email, "email"));
 
 		layout.addComponent(gender);
 		layout.addComponent(firstName);
@@ -68,41 +86,19 @@ public class BeanValidationRoot extends Root {
 
 	public void commit() {
 
-		clearValidators();
-		installValidators();
-
 		try {
 
-			group.commit();
+            ValidatorUtils.installSingleValidator(firstName, "firstName");
+            ValidatorUtils.installSingleValidator(lastName, "lastName");
+            ValidatorUtils.installSingleValidator(email, "email");
+            
+            group.commit();
+
+			showNotification("Creation done", TYPE_HUMANIZED_MESSAGE);
 
 		} catch (CommitException e) {
 
+			showNotification("Please correct errors before commiting", TYPE_ERROR_MESSAGE);
 		}
-	}
-
-	private void clearValidators() {
-
-		AbstractTextField[] fields = new AbstractTextField[] { firstName, lastName, email };
-
-		for (AbstractTextField field : fields) {
-
-			Collection<Validator> validators = field.getValidators();
-
-			if (validators == null || validators.isEmpty()) {
-
-				continue;
-			}
-
-			Validator validator = validators.iterator().next();
-
-			field.removeValidator(validator);
-		}
-	}
-
-	private void installValidators() {
-
-		firstName.addValidator(new BeanValidator(Person.class, "firstName"));
-		lastName.addValidator(new BeanValidator(Person.class, "lastName"));
-		email.addValidator(new BeanValidator(Person.class, "email"));
 	}
 }
