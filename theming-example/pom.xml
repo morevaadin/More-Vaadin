@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.morevaadin</groupId>
+		<artifactId>morevaadin-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.morevaadin.vaadin.theming</groupId>
+	<artifactId>theming-example</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>Vaadin Theming example</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin</artifactId>
+			<version>6.7.6</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<dependency>
+			<groupId>org.vaadin.addons</groupId>
+			<artifactId>reindeermods</artifactId>
+			<version>0.2</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>vaadin-addons</id>
+			<url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+	</repositories>
+</project>

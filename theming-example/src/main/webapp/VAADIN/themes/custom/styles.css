@@ -1,0 +1,20 @@
+@import "../reindeermods/styles.css";
+
+.v-menubar .v-menubar-menuitem {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+div#top {
+	position: right;
+	right: 0px;
+}
+
+div#left {
+	border: 1px solid black;
+}
+
+div#bottom {
+	position: absolute;
+	bottom: 10px;
+}
