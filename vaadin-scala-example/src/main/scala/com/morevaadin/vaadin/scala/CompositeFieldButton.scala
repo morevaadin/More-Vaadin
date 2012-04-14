@@ -1,6 +1,5 @@
 package com.morevaadin.vaadin.scala
 
-import com.vaadin.event.EventRouter
 import com.vaadin.ui.CustomComponent
 import vaadin.scala.{ HorizontalLayout, TextField, Button }
 
