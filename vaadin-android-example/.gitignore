@@ -1,0 +1,8 @@
+/assets
+bin
+project.properties
+gen
+.project
+.classpath
+.settings
+/target
