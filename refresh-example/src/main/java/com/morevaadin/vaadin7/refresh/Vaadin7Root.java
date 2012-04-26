@@ -14,7 +14,7 @@
 * the License.
 */
 
-package com.moorevaadin.vaadin7.refresh;
+package com.morevaadin.vaadin7.refresh;
 
 import static java.text.DateFormat.LONG;
 

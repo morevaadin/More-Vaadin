@@ -8,7 +8,7 @@
 	</parent>
 	<groupId>com.morevaadin.vaadin7.refresh</groupId>
 	<artifactId>refresh-example</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>war</packaging>
 	<name>Vaadin 7 Root Refresh example</name>
 	<dependencies>
