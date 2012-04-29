@@ -19,7 +19,7 @@ import com.vaadin.ui.CustomComponent
 import vaadin.scala.{ HorizontalLayout, TextField, Button }
 
 @SerialVersionUID(1L)
-class CompositeFieldButton() extends CustomComponent {
+class CompositeFieldButton extends CustomComponent {
 
   val layout = new HorizontalLayout(spacing = true, margin = true) {
 
