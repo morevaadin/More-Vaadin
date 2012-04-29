@@ -13,7 +13,7 @@
 		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
 		<init-param>
 			<param-name>root</param-name>
-			<param-value>com.moorevaadin.vaadin7.refresh.Vaadin7Root</param-value>
+			<param-value>com.morevaadin.vaadin7.refresh.Vaadin7Root</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
