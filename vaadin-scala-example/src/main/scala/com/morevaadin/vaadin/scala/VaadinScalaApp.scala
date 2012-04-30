@@ -19,5 +19,5 @@ import vaadin.scala.SimpleApplication
 
 class VaadinScalaApp extends SimpleApplication {
 
-  override def main = new CompositeFieldButton()
+  override def main = new CompositeFieldButton
 }
