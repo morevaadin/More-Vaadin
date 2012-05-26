@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>morevaadin-parent</artifactId>
+		<groupId>com.morevaadin</groupId>
+		<version>1.2.0</version>
+	</parent>
+	<groupId>com.morevaadin.vaadin7.eventbus</groupId>
+	<artifactId>eventbus-example</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>Vaadin and Guava's EventBus integration</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>12.0-rc2</version>
+		</dependency>
+	</dependencies>
+</project>
