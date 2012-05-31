@@ -37,7 +37,6 @@
 				<configuration>
 					<webappDirectory>${project.build.directory}/${project.build.finalName}/VAADIN/widgetsets</webappDirectory>
 					<extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
-					<style>PRETTY</style>
 				</configuration>
 				<executions>
 					<execution>

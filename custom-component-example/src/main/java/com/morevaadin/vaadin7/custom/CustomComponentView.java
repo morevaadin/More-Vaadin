@@ -15,10 +15,10 @@
  */
 package com.morevaadin.vaadin7.custom;
 
-import com.morevaadin.vaadin7.custom.Button.Size;
-import com.morevaadin.vaadin7.custom.Button.Type;
+import com.morevaadin.vaadin7.custom.BootstrapButton.Size;
+import com.morevaadin.vaadin7.custom.BootstrapButton.Type;
+import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Root;
 import com.vaadin.ui.VerticalLayout;
@@ -35,26 +35,27 @@ public class CustomComponentView extends CustomComponent {
 
 		setCompositionRoot(layout);
 
-		
-		layout.addComponent(new com.vaadin.ui.Button("Vaadin"));
-		Button button = new Button("Default");
-		button.addListener(new ClickListener() {
-			
-			@Override
-			public void buttonClick(ClickEvent event) {
-
-				Root.getCurrentRoot().showNotification("I was clicked");
-			}
-		});
+		Button button = new Button("Vaadin");
+		button.addListener(ClickEvent.class, this, "showClick");
 		layout.addComponent(button);
-		layout.addComponent(new Button("Large", Size.LARGE));
-		layout.addComponent(new Button("Small", Size.SMALL));
-		layout.addComponent(new Button("Mini", Size.MINI));
-		layout.addComponent(new Button("Primary", Type.PRIMARY));
-		layout.addComponent(new Button("Info", Type.INFO));
-		layout.addComponent(new Button("Success", Type.SUCCESS));
-		layout.addComponent(new Button("Warning", Type.WARNING));
-		layout.addComponent(new Button("Danger", Type.DANGER));
-		layout.addComponent(new Button("Inverse", Type.INVERSE));
+
+		BootstrapButton customButton = new BootstrapButton("Default");
+		customButton.addListener(BootstrapClickEvent.class, this, "showClick");
+		layout.addComponent(customButton);
+
+		layout.addComponent(new BootstrapButton("Large", Size.LARGE));
+		layout.addComponent(new BootstrapButton("Small", Size.SMALL));
+		layout.addComponent(new BootstrapButton("Mini", Size.MINI));
+		layout.addComponent(new BootstrapButton("Primary", Type.PRIMARY));
+		layout.addComponent(new BootstrapButton("Info", Type.INFO));
+		layout.addComponent(new BootstrapButton("Success", Type.SUCCESS));
+		layout.addComponent(new BootstrapButton("Warning", Type.WARNING));
+		layout.addComponent(new BootstrapButton("Danger", Type.DANGER));
+		layout.addComponent(new BootstrapButton("Inverse", Type.INVERSE));
+	}
+
+	public void showClick() {
+
+		Root.getCurrentRoot().showNotification("I was clicked");
 	}
 }

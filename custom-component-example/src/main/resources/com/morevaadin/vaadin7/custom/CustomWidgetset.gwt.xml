@@ -3,5 +3,7 @@
 <module>
 	<inherits name="com.vaadin.terminal.gwt.DefaultWidgetSet" />
 	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<!-- 
     <set-property name="user.agent" value="safari,gecko1_8" />
+     -->
 </module>
