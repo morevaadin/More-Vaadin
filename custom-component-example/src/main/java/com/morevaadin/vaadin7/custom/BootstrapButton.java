@@ -107,15 +107,21 @@ public class BootstrapButton extends AbstractComponent {
 	public void setSize(Size size) {
 
 		getState().setSize(size.toString());
+		
+		requestRepaint();
 	}
 
 	public void setType(Type size) {
 
 		getState().setType(size.toString());
+		
+		requestRepaint();
 	}
 
 	public void setText(String text) {
 
 		getState().setText(text);
+		
+		requestRepaint();
 	}
 }
