@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="nicolas" authorities="" password="nicolas" />
+				<user name="admin" authorities="" password="admin" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+	<beans:bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler">
+		<beans:property name="invalidateHttpSession" value="false" />
+	</beans:bean>
+
+</beans:beans>
