@@ -1,0 +1,28 @@
+@import "../reindeer/styles.css";
+
+$color: rgb(51,204,255);
+$dark-color: darken($color, 20%);
+$spacing: 4px;
+
+.v-button-caption {
+	color: $color;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.rounded-borders {
+	@include border-radius(4px);
+	border: 1px solid $color;
+}
+
+.v-label {
+	color: $dark-color;
+	padding-left: $spacing;
+	margin-top: $spacing;
+	margin-bottom: $spacing;
+	font-weight: bold;
+}
