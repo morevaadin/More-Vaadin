@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.morevaadin</groupId>
 	<artifactId>morevaadin-parent</artifactId>
-	<version>1.6.0</version>
+	<version>1.7.0</version>
 	<packaging>pom</packaging>
 	<name>Parent POM for More Vaadin projects and examples</name>
 	<organization>
@@ -22,7 +22,7 @@
 		<developerConnection>scm:git:[fetch=]https://nfrankel@github.com/nfrankel/More-Vaadin.git[push=]git@github.com:nfrankel/More-Vaadin.git</developerConnection>
 	</scm>
 	<properties>
-		<vaadin.version>7.1.11</vaadin.version>
+		<vaadin.version>7.3.0.rc1</vaadin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
@@ -30,7 +30,7 @@
 			<plugins>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1.</version>
+					<version>3.1</version>
 					<configuration>
 						<source>1.7</source>
 						<target>1.7</target>
@@ -45,6 +45,7 @@
 								<addClasspath>true</addClasspath>
 							</manifest>
 						</archive>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -90,9 +91,9 @@
 				<version>${vaadin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
+				<groupId>javax</groupId>
+				<artifactId>javaee-web-api</artifactId>
+				<version>7.0</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>

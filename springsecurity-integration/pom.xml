@@ -5,7 +5,6 @@
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
 		<version>1.4.0</version>
-		<relativePath>../morevaadin-parent/pom.xml</relativePath>
 	</parent>
 	<groupId>com.morevaadin.vaadin.springsecurity</groupId>
 	<artifactId>springsecurity-integration</artifactId>
