@@ -1,0 +1,35 @@
+// General Settings
+$v-app-loading-text: "Loading app, please wait...";
+$v-background-color: #0ea5d7;
+$v-app-background-color: lighten($v-background-color, 80%);
+
+// Font Settings
+$v-font-color: #464440;
+$v-font-size: 14px;
+$v-font-family: Helvetica, sans-serif;
+
+// Component Features
+$v-border-radius: 0px;
+$v-border: 2px solid v-tone;
+$v-gradient: v-linear 20%;
+$v-focus-style: 0 0 0 1px v-tint;
+
+@import "../valo/valo";
+
+.custom {
+  @include valo;
+  .v-menubar-menuitem-caption {
+    color: white;
+    font-weight: bold;
+  }
+  .v-menubar {
+    border: none;
+  }
+  .v-link {
+      color: $v-background-color;
+      text-decoration: none !important;
+  }
+  .v-button {
+    color: white;
+  }
+}
