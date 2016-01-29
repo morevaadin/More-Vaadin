@@ -19,6 +19,7 @@
 		<module>sass-example</module>
 		<module>springboot-example</module>
 		<module>theming-example</module>
+		<module>vaadin-android-example</module>
 		<module>vaadin-scala-example</module>
 		<module>valo-theme-example</module>
 		<module>springsecurity-integration</module>
