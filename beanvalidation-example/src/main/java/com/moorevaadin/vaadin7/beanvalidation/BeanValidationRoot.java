@@ -21,18 +21,18 @@ import static com.vaadin.ui.Notification.TYPE_HUMANIZED_MESSAGE;
 import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.fieldgroup.FieldGroup.CommitException;
 import com.vaadin.data.util.BeanItem;
-import com.vaadin.terminal.WrappedRequest;
+import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.AbstractTextField;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.DateField;
 import com.vaadin.ui.Field;
 import com.vaadin.ui.FormLayout;
-import com.vaadin.ui.Root;
+import com.vaadin.ui.UI;
 import com.vaadin.ui.Select;
 
 @SuppressWarnings("serial")
-public class BeanValidationRoot extends Root {
+public class BeanValidationRoot extends UI {
 
 	private FieldGroup group;
 
@@ -43,7 +43,7 @@ public class BeanValidationRoot extends Root {
 	private AbstractTextField email;
 
 	@Override
-	protected void init(WrappedRequest request) {
+	protected void init(VaadinRequest request) {
 
 		setCaption("Vaadin 7 Bean validation example");
 

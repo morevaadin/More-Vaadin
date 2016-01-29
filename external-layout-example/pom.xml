@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
-		<version>1.2.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<groupId>com.morevaadin.vaadin.externallayout</groupId>
 	<artifactId>external-layout-example</artifactId>

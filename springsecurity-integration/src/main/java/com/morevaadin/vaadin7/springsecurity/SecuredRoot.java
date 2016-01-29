@@ -34,16 +34,14 @@ import com.morevaadin.vaadin7.springsecurity.ui.LoginView;
 import com.morevaadin.vaadin7.springsecurity.ui.MainView;
 import com.morevaadin.vaadin7.springsecurity.util.RequestHolder;
 import com.morevaadin.vaadin7.springsecurity.util.ViewChangeSecurityChecker;
-import com.vaadin.annotations.EagerInit;
 import com.vaadin.navigator.Navigator;
-import com.vaadin.navigator.Navigator.SimpleViewDisplay;
-import com.vaadin.terminal.WrappedRequest;
+import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Notification;
-import com.vaadin.ui.Root;
+import com.vaadin.ui.Panel;
+import com.vaadin.ui.UI;
 
 @SuppressWarnings("serial")
-@EagerInit
-public class SecuredRoot extends Root {
+public class SecuredRoot extends UI {
 
 	private static final String MAIN_VIEW_NAME = "main";
 
@@ -54,17 +52,17 @@ public class SecuredRoot extends Root {
 	private Navigator navigator;
 
 	@Override
-	protected void init(WrappedRequest wrappedRequest) {
+	protected void init(VaadinRequest wrappedRequest) {
 
 		getPage().setTitle("Vaadin Spring Security integration example");
 
-		SimpleViewDisplay viewDisplay = new SimpleViewDisplay();
+		Panel viewDisplay = new Panel();
 
 		setContent(viewDisplay);
 
-		navigator = new Navigator(getPage(), viewDisplay);
+		navigator = new Navigator(this, viewDisplay);
 		
-		navigator.addListener(new ViewChangeSecurityChecker());
+		navigator.addViewChangeListener(new ViewChangeSecurityChecker());
 
 		navigator.addView(LOGIN_VIEW_NAME, new LoginView(bus));
 		navigator.addView(MAIN_VIEW_NAME, new MainView(bus));

@@ -15,15 +15,14 @@
  */
 package com.morevaadin.eventbus.ui;
 
-import com.vaadin.terminal.WrappedRequest;
-import com.vaadin.ui.Root;
+import com.vaadin.server.VaadinRequest;
+import com.vaadin.ui.UI;
 
 @SuppressWarnings("serial")
-public class EventBusRoot extends Root {
+public class EventBusRoot extends UI {
 
 	@Override
-	protected void init(WrappedRequest request) {
-
+	protected void init(VaadinRequest request) {
 		setContent(new AggregateView());
 	}
 }

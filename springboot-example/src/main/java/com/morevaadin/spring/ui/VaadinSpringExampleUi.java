@@ -4,7 +4,7 @@ import com.morevaadin.spring.service.HelloService;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import org.vaadin.spring.VaadinUI;
+import org.vaadin.spring.annotation.VaadinUI;
 
 @VaadinUI
 public class VaadinSpringExampleUi extends UI {

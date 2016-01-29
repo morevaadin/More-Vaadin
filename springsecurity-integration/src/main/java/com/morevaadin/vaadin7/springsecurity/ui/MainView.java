@@ -4,7 +4,7 @@ package com.morevaadin.vaadin7.springsecurity.ui;
  * #%L
  * Vaadin 7 Spring Security Integration
  * %%
- * Copyright (C) 2012 Nicolas Fränkel
+ * Copyright (C) 2012 Nicolas Frankel
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,19 +20,21 @@ package com.morevaadin.vaadin7.springsecurity.ui;
  * #L%
  */
 
-import org.springframework.security.core.context.SecurityContextHolder;
-
 import com.google.common.eventbus.EventBus;
+
 import com.morevaadin.vaadin7.springsecurity.event.LogoutEvent;
 import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.Panel;
+import com.vaadin.ui.VerticalLayout;
+
+import org.springframework.security.core.context.SecurityContextHolder;
 
 @SuppressWarnings("serial")
-public class MainView extends Panel implements View {
+public class MainView extends VerticalLayout implements View {
 
 	private Label label;
 
@@ -57,8 +59,7 @@ public class MainView extends Panel implements View {
 	}
 
 	@Override
-	public void navigateTo(String fragmentParameters) {
-
+	public void enter(ViewChangeListener.ViewChangeEvent event) {
 		String user = SecurityContextHolder.getContext().getAuthentication().getName();
 
 		label.setValue("Welcome to " + user);

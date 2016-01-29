@@ -15,16 +15,17 @@
  */
 package com.morevaadin.vaadin7.converter;
 
-import com.vaadin.terminal.WrappedRequest;
-import com.vaadin.ui.Root;
+import com.vaadin.server.VaadinRequest;
+import com.vaadin.server.VaadinSession;
+import com.vaadin.ui.UI;
 
 @SuppressWarnings("serial")
-public class ConverterRoot extends Root {
+public class ConverterRoot extends UI {
 
 	@Override
-	protected void init(WrappedRequest request) {
+	protected void init(VaadinRequest request) {
 
-		getApplication().setConverterFactory(new EnhancedConverterFactory());
+		VaadinSession.getCurrent().setConverterFactory(new EnhancedConverterFactory());
 
 		setContent(new ConverterView());
 	}

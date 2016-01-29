@@ -4,7 +4,7 @@ package com.morevaadin.vaadin7.springsecurity.ui;
  * #%L
  * Vaadin 7 Spring Security Integration
  * %%
- * Copyright (C) 2012 Nicolas Fränkel
+ * Copyright (C) 2012 Nicolas Frankel
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ package com.morevaadin.vaadin7.springsecurity.ui;
 import com.google.common.eventbus.EventBus;
 import com.morevaadin.vaadin7.springsecurity.event.LoginEvent;
 import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
@@ -62,7 +63,8 @@ public class LoginView extends FormLayout implements View  {
 		
 		addComponent(button);
 	}
-	
+
 	@Override
-	public void navigateTo(String fragmentParameters) {}
+	public void enter(ViewChangeListener.ViewChangeEvent event) {
+	}
 }

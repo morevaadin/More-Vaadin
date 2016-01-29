@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
-		<version>1.3.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<artifactId>navigation-example</artifactId>
 	<version>1.0.0</version>
@@ -12,7 +12,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin</artifactId>
+			<artifactId>vaadin-server</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -25,7 +25,7 @@ import com.vaadin.ui.Field;
 @SuppressWarnings("serial")
 public class EnhancedFieldGroupFieldFactory implements FieldGroupFieldFactory {
 
-	private FieldGroupFieldFactory fieldFactory = new DefaultFieldGroupFieldFactory();
+	private FieldGroupFieldFactory fieldFactory = new DefaultFieldGroupFieldFactory(){};
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override

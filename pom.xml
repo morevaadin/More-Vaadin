@@ -5,7 +5,23 @@
 	<artifactId>morevaadin-parent</artifactId>
 	<version>1.7.0</version>
     <modules>
-        <module>grid-example</module>
+		<module>beanvalidation-example</module>
+		<module>converter-example</module>
+		<module>grid-example</module>
+		<module>custom-component-example</module>
+		<module>embed-example</module>
+		<module>eventbus-example</module>
+		<module>external-layout-example</module>
+		<module>html-js-integration</module>
+		<module>lambda</module>
+		<module>navigation-example</module>
+		<module>refresh-example</module>
+		<module>sass-example</module>
+		<module>springboot-example</module>
+		<module>theming-example</module>
+		<module>vaadin-scala-example</module>
+		<module>valo-theme-example</module>
+		<module>springsecurity-integration</module>
     </modules>
     <packaging>pom</packaging>
 	<name>Parent POM for More Vaadin projects and examples</name>
@@ -25,7 +41,7 @@
 		<developerConnection>scm:git:[fetch=]https://nfrankel@github.com/nfrankel/More-Vaadin.git[push=]git@github.com:nfrankel/More-Vaadin.git</developerConnection>
 	</scm>
 	<properties>
-		<vaadin.version>7.4.0</vaadin.version>
+		<vaadin.version>7.6.0</vaadin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>

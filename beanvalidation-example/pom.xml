@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>morevaadin-parent</artifactId>
 		<groupId>com.morevaadin</groupId>
-		<version>1.0.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<groupId>com.morevaadin.vaadin7.beanvalidation</groupId>
 	<artifactId>beanvalidation-example</artifactId>
@@ -13,13 +13,13 @@
 	<name>Vaadin 7 Bean Validation example</name>
 	<dependencies>
 		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.2.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-server</artifactId>
 		</dependency>
 	</dependencies>
 </project>

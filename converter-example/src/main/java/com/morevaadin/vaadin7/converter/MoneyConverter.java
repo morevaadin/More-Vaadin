@@ -25,12 +25,10 @@ import com.vaadin.data.util.converter.Converter;
 public class MoneyConverter implements Converter<String, Money> {
 
 	@Override
-	public Money convertToModel(String value, Locale locale) throws ConversionException {
+	public Money convertToModel(String value, Class<? extends Money> targetType, Locale locale) throws ConversionException {
 
 		try {
-
 			return Money.parse(value);
-
 		} catch (IllegalArgumentException e) {
 
 			throw new ConversionException(e);
@@ -38,8 +36,7 @@ public class MoneyConverter implements Converter<String, Money> {
 	}
 
 	@Override
-	public String convertToPresentation(Money money, Locale locale) throws ConversionException {
-
+	public String convertToPresentation(Money money, Class<? extends String> targetType, Locale locale) throws ConversionException {
 		return money.toString();
 	}
 

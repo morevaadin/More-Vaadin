@@ -16,6 +16,7 @@
 package com.morevaadin.vaadin7.navigation;
 
 import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
@@ -27,7 +28,8 @@ public class ViewLayout extends VerticalLayout implements View {
 		addComponent(new Label(text));
 		addComponent(new Label(toString()));
 	}
-	
+
 	@Override
-	public void navigateTo(String fragmentParameters) {}
+	public void enter(ViewChangeListener.ViewChangeEvent event) {
+	}
 }

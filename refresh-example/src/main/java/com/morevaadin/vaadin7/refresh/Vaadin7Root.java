@@ -82,8 +82,8 @@ public class Vaadin7Root extends Root {
 		addInfoLine("User agent major version", String.valueOf(browser.getBrowserMajorVersion()));
 		addInfoLine("User agent minor version", String.valueOf(browser.getBrowserMinorVersion()));
 
-		addInfoLine("Window height", String.valueOf(browser.getClientHeight()));
-		addInfoLine("Window width", String.valueOf(browser.getClientWidth()));
+		addInfoLine("Window height", String.valueOf(browser.getScreenHeight()));
+		addInfoLine("Window width", String.valueOf(browser.getScreenWidth()));
 		addInfoLine("Screen height", String.valueOf(browser.getScreenHeight()));
 		addInfoLine("Screen width", String.valueOf(browser.getScreenWidth()));
 
