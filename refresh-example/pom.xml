@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
-		<version>1.0.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<groupId>com.morevaadin.vaadin7.refresh</groupId>
 	<artifactId>refresh-example</artifactId>
@@ -15,6 +15,7 @@
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin</artifactId>
+			<version>7.0.0.alpha3</version>
 		</dependency>
 	</dependencies>
 </project>

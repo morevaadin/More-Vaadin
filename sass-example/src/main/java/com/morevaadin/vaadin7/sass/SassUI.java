@@ -20,10 +20,10 @@ package com.morevaadin.vaadin7.sass;
  * #L%
  */
 
-
 import com.vaadin.annotations.Theme;
-import com.vaadin.server.WrappedRequest;
+import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 
@@ -32,15 +32,16 @@ import com.vaadin.ui.UI;
 public class SassUI extends UI {
 
 	@Override
-	protected void init(WrappedRequest request) {
+	protected void init(VaadinRequest request) {
 
 		Button button = new Button("Do nothing");
 
 		Label label = new Label("Rounded borders");
 
 		label.setStyleName("rounded-borders");
-		
-		addComponent(button);
-		addComponent(label);
+
+		HorizontalLayout horizontalLayout = new HorizontalLayout(button, label);
+
+		setContent(horizontalLayout);
 	}
 }

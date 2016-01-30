@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>morevaadin-parent</artifactId>
 		<groupId>com.morevaadin</groupId>
-		<version>1.2.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<groupId>com.morevaadin.vaadin7.eventbus</groupId>
 	<artifactId>eventbus-example</artifactId>
@@ -14,7 +14,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin</artifactId>
+			<artifactId>vaadin-server</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>

@@ -17,16 +17,17 @@ package com.morevaadin.vaadin7.custom.client.ui;
 
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
 import com.github.gwtbootstrap.client.ui.resources.ButtonSize;
+import com.vaadin.client.MouseEventDetailsBuilder;
+import com.vaadin.client.communication.RpcProxy;
+import com.vaadin.client.communication.StateChangeEvent;
+import com.vaadin.client.ui.AbstractComponentConnector;
+import com.vaadin.shared.MouseEventDetails;
+import com.vaadin.shared.ui.Connect;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Widget;
-import com.vaadin.terminal.gwt.client.MouseEventDetails;
-import com.vaadin.terminal.gwt.client.MouseEventDetailsBuilder;
-import com.vaadin.terminal.gwt.client.communication.RpcProxy;
-import com.vaadin.terminal.gwt.client.communication.StateChangeEvent;
-import com.vaadin.terminal.gwt.client.ui.AbstractComponentConnector;
-import com.vaadin.terminal.gwt.client.ui.Connect;
 
 @SuppressWarnings("serial")
 @Connect(com.morevaadin.vaadin7.custom.BootstrapButton.class)

@@ -15,8 +15,8 @@
  */
 package com.morevaadin.vaadin7.custom.client.ui;
 
-import com.vaadin.terminal.gwt.client.MouseEventDetails;
-import com.vaadin.terminal.gwt.client.communication.ServerRpc;
+import com.vaadin.shared.MouseEventDetails;
+import com.vaadin.shared.communication.ServerRpc;
 
 public interface BootstrapButtonRpc extends ServerRpc {
 

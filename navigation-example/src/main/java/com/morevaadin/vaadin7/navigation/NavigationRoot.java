@@ -16,13 +16,11 @@
 package com.morevaadin.vaadin7.navigation;
 
 import com.vaadin.navigator.Navigator;
-import com.vaadin.terminal.WrappedRequest;
+import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.MenuBar;
-import com.vaadin.ui.MenuBar.Command;
-import com.vaadin.ui.MenuBar.MenuItem;
 import com.vaadin.ui.Panel;
-import com.vaadin.ui.Root;
+import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
 /**
@@ -31,12 +29,12 @@ import com.vaadin.ui.VerticalLayout;
  * @version 1.0
  */
 @SuppressWarnings("serial")
-public class NavigationRoot extends Root {
+public class NavigationRoot extends UI {
 
 	private static final String[] VIEWS = { "Alternate", "Main", "Secondary", "Principal" };
 
 	@Override
-	protected void init(WrappedRequest request) {
+	protected void init(VaadinRequest request) {
 
 		VerticalLayout layout = new VerticalLayout();
 
@@ -44,23 +42,22 @@ public class NavigationRoot extends Root {
 
 		layout.addComponent(bar);
 
-		Panel panel = new Panel() {
-			
-			{ addComponent(new Label("Default")); }
-		};
+		Panel panel = new Panel();
+
+		panel.setContent(new Label("Default"));
 
 		layout.addComponent(panel);
 
 		setContent(layout);
 
-		final Navigator navigator = new Navigator(panel);
+		final Navigator navigator = new Navigator(this, panel);
 
 		for (final String view : VIEWS) {
 
-			bar.addItem(view, new Command() {
+			bar.addItem(view, new MenuBar.Command() {
 
 				@Override
-				public void menuSelected(MenuItem selectedItem) {
+				public void menuSelected(MenuBar.MenuItem selectedItem) {
 
 					navigator.navigateTo(view);
 				}

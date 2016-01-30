@@ -15,15 +15,14 @@
  */
 package com.morevaadin.vaadin7.custom;
 
-import com.vaadin.terminal.WrappedRequest;
-import com.vaadin.ui.Root;
+import com.vaadin.server.VaadinRequest;
+import com.vaadin.ui.UI;
 
 @SuppressWarnings("serial")
-public class CustomComponentRoot extends Root {
+public class CustomComponentRoot extends UI {
 
 	@Override
-	protected void init(WrappedRequest request) {
-
+	protected void init(VaadinRequest request) {
 		setContent(new CustomComponentView());
 	}
 }

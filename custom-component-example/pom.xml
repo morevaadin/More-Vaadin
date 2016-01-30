@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
-		<version>1.2.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<groupId>com.morevaadin.vaadin7.custom</groupId>
 	<artifactId>custom-component-example</artifactId>
@@ -14,11 +14,11 @@
 		<dependency>
 			<groupId>com.github.gwtbootstrap</groupId>
 			<artifactId>gwt-bootstrap</artifactId>
-			<version>2.0.3.0-SNAPSHOT</version>
+			<version>2.3.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin</artifactId>
+			<artifactId>vaadin-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>

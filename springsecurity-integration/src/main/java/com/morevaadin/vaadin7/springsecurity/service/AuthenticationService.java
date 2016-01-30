@@ -4,7 +4,7 @@ package com.morevaadin.vaadin7.springsecurity.service;
  * #%L
  * Vaadin 7 Spring Security Integration
  * %%
- * Copyright (C) 2012 Nicolas Fränkel
+ * Copyright (C) 2012 Nicolas Frankel
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

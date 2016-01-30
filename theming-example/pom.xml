@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
-		<version>1.0.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<groupId>com.morevaadin.vaadin.theming</groupId>
 	<artifactId>theming-example</artifactId>

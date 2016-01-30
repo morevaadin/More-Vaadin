@@ -4,7 +4,7 @@ package com.morevaadin.vaadin7.springsecurity.util;
  * #%L
  * Vaadin 7 Spring Security Integration
  * %%
- * Copyright (C) 2012 Nicolas Fränkel
+ * Copyright (C) 2012 Nicolas Frankel
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,10 +28,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.vaadin.terminal.gwt.server.ApplicationServlet;
+import com.vaadin.server.VaadinServlet;
 
 @SuppressWarnings("serial")
-public class RequestHolderApplicationServlet extends ApplicationServlet {
+public class RequestHolderApplicationServlet extends VaadinServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

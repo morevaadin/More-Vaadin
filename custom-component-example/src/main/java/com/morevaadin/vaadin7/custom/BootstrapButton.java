@@ -17,7 +17,7 @@ package com.morevaadin.vaadin7.custom;
 
 import com.morevaadin.vaadin7.custom.client.ui.BootstrapButtonRpc;
 import com.morevaadin.vaadin7.custom.client.ui.BootstrapButtonState;
-import com.vaadin.terminal.gwt.client.MouseEventDetails;
+import com.vaadin.shared.MouseEventDetails;
 import com.vaadin.ui.AbstractComponent;
 
 @SuppressWarnings("serial")

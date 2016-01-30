@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.morevaadin</groupId>
 		<artifactId>morevaadin-parent</artifactId>
-		<version>1.1.0</version>
+		<version>1.7.0</version>
 	</parent>
 	<artifactId>vaadin-scala-example</artifactId>
 	<packaging>war</packaging>

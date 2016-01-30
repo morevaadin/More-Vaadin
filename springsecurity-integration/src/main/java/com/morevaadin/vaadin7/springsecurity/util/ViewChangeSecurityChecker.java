@@ -4,7 +4,7 @@ package com.morevaadin.vaadin7.springsecurity.util;
  * #%L
  * Vaadin 7 Spring Security Integration
  * %%
- * Copyright (C) 2012 Nicolas Fränkel
+ * Copyright (C) 2012 Nicolas Frankel
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,7 @@ import com.vaadin.navigator.ViewChangeListener;
 public class ViewChangeSecurityChecker implements ViewChangeListener {
 
 	@Override
-	public boolean isViewChangeAllowed(ViewChangeEvent event) {
-
+	public boolean beforeViewChange(ViewChangeEvent event) {
 		if (event.getNewView() instanceof LoginView) {
 
 			return true;
@@ -43,5 +42,7 @@ public class ViewChangeSecurityChecker implements ViewChangeListener {
 	}
 
 	@Override
-	public void navigatorViewChanged(ViewChangeEvent event) {}
+	public void afterViewChange(ViewChangeEvent event) {
+
+	}
 }
